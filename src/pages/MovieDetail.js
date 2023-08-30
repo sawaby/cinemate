@@ -15,7 +15,7 @@ export const MovieDetail = () => {
       setMovie(json);
     }
     fetchMovies();
-  }, [])
+  }, [params.id])
 
   // use title changes the title of the page accordingly using useTitle hook
   useTitle(`Search Result for ${movie.title}`);
