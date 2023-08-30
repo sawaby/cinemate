@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Backup from '../assets/images/backup.jpg';
+import { useTitle } from '../hooks/useTitle';
 
 export const MovieDetail = () => {
   const params = useParams();
@@ -16,7 +17,8 @@ export const MovieDetail = () => {
     fetchMovies();
   }, [])
 
-
+  // use title changes the title of the page accordingly using useTitle hook
+  useTitle(`Search Result for ${movie.title}`);
 
   return (
     <main>

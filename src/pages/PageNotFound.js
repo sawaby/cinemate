@@ -2,8 +2,14 @@
 import { Link } from "react-router-dom";
 import PageNotFoundImage from "../assets/images/backup.jpg";
 import { Button } from "../components";
+import { useEffect } from "react";
 
 export const PageNotFound = () => {
+
+  useEffect(() => {
+    document.title = `Page Not Found / CineMate`;
+  });
+  
   return (
     <main>
       <section className="flex flex-col justify-center px-2">
