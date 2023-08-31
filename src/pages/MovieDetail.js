@@ -68,7 +68,11 @@ export const MovieDetail = () => {
           </p>
           <p className="my-4">
             <span className='mr-2 font-bold'>IMDB Code:</span>
-            <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target='_blank' rel='noreferrer'>{movie.imdb_id}</a>
+            <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target='_blank' rel='noreferrer'>
+              <span className='mr-2 border border-gray-200 rounded dark:border-gray-600 p-2 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'>
+                  {movie.imdb_id}
+              </span>
+              </a>
           </p>
             
         </div>
